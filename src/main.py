@@ -67,7 +67,6 @@ def handle_delete_todo(Todo_id):
 
     task = Todo.query.get(Todo_id)
    
-
     if task is None:
         raise APIException('Todo not found', status_code=404)
     db.session.delete(task)
